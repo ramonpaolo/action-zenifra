@@ -1,0 +1,13 @@
+name: 'Zenifra Image'
+description: 'Action to be used to deploy new image in Zenifra'
+author: Ramon Paolo Maram
+inputs:
+  image:
+    description: 'The new image to update the project'
+    required: true
+  api_key:
+    description: 'The API_KEY to authenticate in Zenifra'
+    required: true
+runs:
+  using: node20
+  main: dist/index.js
