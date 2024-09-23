@@ -31105,6 +31105,9 @@ try {
     body: JSON.stringify({
       image: NEW_IMAGE,
     }),
+    headers: {
+      'Content-Type': 'application/json',
+    }
   })
     .then((v) => {
       const receivedStatusCode = v.status;
