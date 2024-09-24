@@ -31100,7 +31100,7 @@ try {
 
   core.info(`updating deployment to use image ${NEW_IMAGE}`);
 
-  fetch(`https://zenifra-core-a55edb3e932113d742.zenifra.com/v1/user/project/${PROJECT_ID}/image`, {
+  fetch(`https://zenifra-core-a81f320089a23a97e4.zenifra.com/v1/user/project/${PROJECT_ID}/image`, {
     method: 'PATCH',
     body: JSON.stringify({
       image: NEW_IMAGE,
