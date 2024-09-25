@@ -31095,8 +31095,9 @@ const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
 try {
-  const PROJECT_ID = core.getInput('project_id');
-  const NEW_IMAGE = core.getInput('image');
+  const PROJECT_ID = core.getInput('PROJECT_ID');
+  const API_KEY = core.getInput('API_KEY');
+  const NEW_IMAGE = core.getInput('IMAGE');
 
   core.info(`updating deployment to use image ${NEW_IMAGE}`);
 
@@ -31107,6 +31108,7 @@ try {
     }),
     headers: {
       'Content-Type': 'application/json',
+      'X-API-Key': `${API_KEY}`
     }
   })
     .then((v) => {
